@@ -1,0 +1,36 @@
+data;
+
+set MINREQ := CALORIAS PROTEINAS CALCIO A C ;
+set MAXREQ := CALORIAS CALCIO A C ;
+set FOOD := arroz feijao bife tomate alface pao ovo leite banana laranja;
+
+param:   	cost  f_min  f_max :=
+  arroz   	0.50    1     10 
+  feijao    3.00    1     10 
+  bife   	4.00    1     10 
+  tomate    1.40    1     10 
+  alface    1.00    1     10 
+  pao    	1.00    1     10 
+  ovo  		0.50    1     10 
+  leite    	1.00    1     10  
+  banana   	0.70    1     10  
+  laranja  	0.50    1     10  ;
+
+param:   		n_min  n_max :=
+   CALORIAS     2000   	2800
+   PROTEINAS    56      .
+   CALCIO       1300    3000
+   A		    900     3000
+   C 			90   	200 ;
+
+param amt (tr):   	CALORIAS    PROTEINAS   CALCIO   A    C :=
+          arroz   	128   		2.5   		4   	 0    0	
+          feijao   	76    		4.8   		27  	 0    0
+          bife    	157    		24   		4	  	 0    0
+          tomate  	15   		1.1   		7  	 	 27   21.2
+          alface  	14   		1.7   		28  	 184  21.4
+          pao     	300   		8   		16  	 0    0
+          ovo	    146   		13.3   		49  	 0    0
+          leite    	113   		6   		123  	 0    0
+          banana   	87   		1.8   		3  		 3    10.5 
+          laranja  	37   		1   		22  	 0    53.7 ;
