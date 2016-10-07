@@ -1,0 +1,62 @@
+data;
+
+set MINREQ := CALORIAS PROTEINAS CALCIO A C B2 B1 B6 FERRO MAGNESIO;
+set MAXREQ := CALORIAS CALCIO A C B6;
+set FOOD := arroz bolacha cereal pao alface beringela beterraba tomate abacaxi banana laranja  manteiga peixe bife frango iogurte leite queijo ovo feijao;
+
+param:   	cost  f_min  f_max :=
+  arroz   	0.50    0		10
+  bolacha	1.10	0		10
+  cereal	0.70	0		10
+  pao    	1.00    0     	10 
+  alface    1.10    0     	10 
+  beringela	0.80	0		10
+  beterraba	1.00	0		10
+  tomate	1.40	0	  	10
+  abacaxi	1.20	0		10
+  banana   	0.70    0     	10 
+  laranja  	0.50    0     	10
+  manteiga	0.30	0		10
+  peixe		2.50	0		10
+  bife   	2.00    0     	10  
+  frango	2.00	0		10
+  iogurte	1.50	0		10
+  leite    	1.00    0     	10
+  queijo	1.50	0		10
+  ovo		0.50	0     	10
+  feijao    3.00    0     	10 ;
+
+
+param:   		n_min  n_max :=
+   CALORIAS     1900   	2100
+   PROTEINAS    56      .
+   CALCIO       1300    3000
+   A		    900     3000
+   C 			90   	200
+   MAGNESIO		400		.
+   FERRO		18		.
+   B1			1.1		.
+   B2			1.3		.
+   B6			1.3		100  ;
+
+param amt (tr):   	CALORIAS    PROTEINAS   CALCIO   A  	C 		MAGNESIO	FERRO	B2		B1		B6:=
+          arroz		128			2.5			4		 0		0		2			0.1		0.40	0.50	0.56			
+		  bolacha	443			8.1			54		 0		6.2		37			1.8		0.42	1.01	0.23
+		  cereal	377			4.7			56		 15		14.6	8			3.9		1.11	0.73	0.79
+		  pao		300			8.0			16		 0		0		25			1.0		0.67	0.39	0.60
+		  alface	14			1.7			28		 128	21.4	11			0.4		0.12	0.11	0
+		  beringela	20			1.2			9		 12		3		13			0.2		0.05	0.04	0.04
+		  beterraba	32			1.3			15		 0		1.2		17			0.2		0		0.09	0
+		  tomate	15			1.1			7		 27		21.2	11			0.2		0.04	0.12	0.02
+		  abacaxi	48			0.9			22		 0		34.6	18			0.3		0.02	0.17	0
+		  banana	87			1.8			3		 119	10.5	24			0.3		0.02	0.03	0.14
+		  laranja	37			1.1			22		 0		53.4	14			0.1		0.09	0.07	0.03
+		  manteiga	726			0.4			9		 0		0		1			0.2		0		0		0
+		  peixe		122			26.6		36		 12		0.07	20			0.4		0.03	0.05	0.07	
+		  bife		127			24			4		 5		0.12	21			2.4		0.17	0.12	0.16
+		  frango	159			32			5		 2		0.05	18			0.3		0.11	0.08	0.04
+		  iogurte	51			4.1			143		 0		0.9		11			0.1		0.22	0.04	0.02
+		  leite		113			6			123		 0		0		10			0		0.24	0.04	0
+		  ovo		146			13.3		49		 0		0		11			1.5		0.30	0.08	0
+		  feijao 	76			4.8			27		 0		0		42			1.3		0.06	0.04	0.07  
+		  queijo	264			17.4		579		 0		0		7			0.9		0.25	0.03	0.01;
